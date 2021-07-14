@@ -8,6 +8,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Spinnaker&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cambo&display=swap");
+
 /* 
  <------------>
  *** Reset *** 
@@ -23,17 +29,20 @@
 
 /* 
  <------------>
- *** Root ***    
+ *** Root ***     
       🔽 
  <------------>                                      
 */
 
 :root {
   --bg_white: #fff; /*!  variable  */
-
+  --primary_clr: #202836;
+  --btn_bg_clr: #547e69;
+  --bg_light: #6c6c6c;
   --font_s: 20px;
-  --font_m: 30px;
+  --font_m: 40px;
   --font_l: 60px;
+  --primary_font: "Poppins", sans-serif;
 }
 
 /* 
@@ -42,7 +51,11 @@
        🔽 
  <------------>                                      
 */
+body {
+  background-color: var(--primary_clr);
+}
 .container {
+  font-family: var(--primary_font);
   width: 1162px;
   margin: auto;
 }
@@ -50,16 +63,29 @@
 a {
   text-decoration: none;
 }
+a:hover {
+  color: #3a53468c;
+}
 
 li {
   list-style-type: none;
 }
+.s_space {
+  margin-top: 4.5rem;
+}
+.m_space {
+  margin-top: 9rem;
+}
 .btn {
+  display: inline-block;
   width: 168px;
   height: 44px;
   align-items: center;
-  background-color: #e02c6d;
+  background-color: var(--btn_bg_clr);
   padding: 0.5rem 1.3rem;
+}
+.clr {
+  clear: both;
 }
 .icon {
   color: #fff;
@@ -92,6 +118,10 @@ li {
 .my_2 {
   margin: 1.25rem 0;
 }
+hr {
+  margin: 20px 0;
+  border: 1px solid #ff1541;
+}
 /* 
  <------------>
  *** Header ***    
@@ -100,9 +130,9 @@ li {
 */
 
 header {
-  background-color: #2d25a0;
-  font-family: "Poppins", sans-serif;
-  height: 88vh;
+  background-color: var(--primary_clr);
+
+  height: 591px;
 }
 /*!  Navigation Menu (navbar)  */
 
@@ -134,10 +164,9 @@ header {
   width: 133px;
   height: 44px;
   align-items: center;
-  background-color: #e02c6d;
   padding: 0.5rem 1rem;
 }
-/*!   ShowCase   */
+/*!   ShowCase  Menu */
 #showcase {
   display: flex;
   justify-content: start;
@@ -153,20 +182,197 @@ header {
   font-size: var(--font_l);
   color: var(--bg_white);
 }
-#showcase .sc_right img {
-  width: 556.01px;
-  height: 438px;
+#showcase .sc_right {
+  display: flex;
 }
+#showcase .sc_right img {
+  width: 380px;
+  height: 400px;
+}
+
+/* animation */
+
 /* 
  <------------>
  *** Main ***    
       🔽 
  <------------>                                      
 */
+/*!  Players  Section */
+
+#players {
+  background-color: var(--primary_clr);
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  align-items: center;
+  justify-content: center;
+  grid-row-gap: 1.6rem;
+  grid-column-gap: 1.8rem;
+}
+#players .player {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 300px;
+  height: 430px;
+  background: #1a222e;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+}
+#players .player img {
+  height: 40%;
+  margin: auto;
+}
+#players .player .player_name {
+  margin: 10px;
+  font-family: "Spinnaker", sans-serif;
+  font-size: 22px;
+  font-weight: 900;
+}
+#players .player .player_info {
+  color: var(--bg_light);
+  line-height: 1.4;
+}
+
+/*! Matches Section */
+
+.container #matches {
+  display: flex;
+  justify-content: space-between;
+}
+
+#matches .matches_left {
+  height: 309px;
+  width: 469px;
+  margin-top: 12px;
+}
+#matches .matches_left .m_heading {
+  font-size: var(--font_m);
+  line-height: 60px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: rgb(146, 79, 209);
+}
+#matches .matches_left p {
+  color: var(--bg_light);
+}
+#matches .matches_left .btn {
+  width: 173px;
+}
+#matches .matches_left a {
+  font-size: 16px;
+}
+#matches .matches_right {
+  width: 50%;
+}
+#matches .matches_right img {
+  width: 100%;
+}
+
+/*! Features */
+
+#features {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#features .feature h2 {
+  color: #ff1541;
+  margin: 10px 0;
+}
+
+/*!  Registration Section */
+#register {
+  background: rgb(38, 39, 39);
+  display: flex;
+  height: 340px;
+}
+
+#register .rg_left {
+  width: 50%;
+  position: relative;
+}
+#register div {
+  flex: 1;
+}
+#register .rg_left img {
+  height: 100%;
+}
+#register .rg_right {
+  padding: 30px 25px;
+}
+#register .rg_right p {
+  font-size: 18px;
+  color: #5976a7;
+}
+#register .rg_right h2 {
+  color: #fff;
+}
+#register .rg_right input {
+  width: 70%;
+  height: 40px;
+  display: inline-block;
+  margin: 20px 0;
+}
+#register .rg_right button {
+  width: 28%;
+  height: 40px;
+  background-color: #547e69;
+}
+#register .rg_right .small_size {
+  font-size: 13px;
+  color: #525968;
+}
 
 /* 
  <------------>
  *** Footer ***    
-       🔽 
+       🔽
  <------------>                                      
 */
+footer {
+  background-color: var(--primary_clr);
+  height: 600px;
+}
+footer .top_part {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+}
+footer .top_part h4 {
+  color: #fff;
+  font-family: "Cambo", serif;
+  font-weight: 900;
+}
+footer .top_part a {
+  display: flex;
+  flex-direction: column;
+  color: #525968;
+  margin: 10px 0;
+}
+footer .top_part img {
+  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+}
+footer .bottom_part {
+  height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  color: #eee;
+  font-family: "Noto Sans", sans-serif;
+}
+footer .bottom_part .logo {
+  width: 483.87px;
+  height: 110px;
+}
+footer .bottom_part .social_icon img {
+  width: 22px;
+  height: 20px;
+  margin: 10px 0;
+}
