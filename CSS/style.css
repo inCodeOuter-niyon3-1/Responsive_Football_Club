@@ -1,0 +1,172 @@
+/* 
+ <------------>
+ *** Import ***    
+      🔽 
+ <------------>                                      
+*/
+/*!    Fonts     */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+/* 
+ <------------>
+ *** Reset *** 
+      🔽 
+ <------------>                                      
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 
+ <------------>
+ *** Root ***    
+      🔽 
+ <------------>                                      
+*/
+
+:root {
+  --bg_white: #fff; /*!  variable  */
+
+  --font_s: 20px;
+  --font_m: 30px;
+  --font_l: 60px;
+}
+
+/* 
+ <------------>
+ *** Utility ***  
+       🔽 
+ <------------>                                      
+*/
+.container {
+  width: 1162px;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+.btn {
+  width: 168px;
+  height: 44px;
+  align-items: center;
+  background-color: #e02c6d;
+  padding: 0.5rem 1.3rem;
+}
+.icon {
+  color: #fff;
+  padding: 0 6px;
+}
+.block {
+  display: block;
+}
+.inline_block {
+  display: inline-block;
+}
+.bg_light {
+  color: #eee;
+}
+.bg_dark {
+  color: #444;
+}
+.py_1 {
+  padding: 1rem 0;
+}
+.py_2 {
+  padding: 2rem 0;
+}
+.py_3 {
+  padding: 3rem 0;
+}
+.my_1 {
+  margin: 0.75rem 0;
+}
+.my_2 {
+  margin: 1.25rem 0;
+}
+/* 
+ <------------>
+ *** Header ***    
+       🔽 
+ <------------>                                      
+*/
+
+header {
+  background-color: #2d25a0;
+  font-family: "Poppins", sans-serif;
+  height: 88vh;
+}
+/*!  Navigation Menu (navbar)  */
+
+#navbar {
+  display: flex;
+
+  height: 48px;
+  justify-content: space-between;
+  align-items: center;
+}
+#navbar .menu_list {
+  display: flex;
+  font-size: var(--font_s);
+}
+#navbar .menu_list li {
+  margin: 0 1.25rem;
+}
+#navbar .menu_list li:first-child {
+  margin: 0;
+}
+#navbar .menu_list li a,
+#navbar .login_btn .login_icon,
+#navbar .login_btn a {
+  color: var(--bg_white);
+}
+
+#navbar .login_btn {
+  display: flex;
+  width: 133px;
+  height: 44px;
+  align-items: center;
+  background-color: #e02c6d;
+  padding: 0.5rem 1rem;
+}
+/*!   ShowCase   */
+#showcase {
+  display: flex;
+  justify-content: start;
+}
+#showcase div {
+  flex: 1;
+}
+#showcase .sc_left .left_content {
+  width: 485px;
+  height: 265px;
+  font-weight: 700px;
+  line-height: 75px;
+  font-size: var(--font_l);
+  color: var(--bg_white);
+}
+#showcase .sc_right img {
+  width: 556.01px;
+  height: 438px;
+}
+/* 
+ <------------>
+ *** Main ***    
+      🔽 
+ <------------>                                      
+*/
+
+/* 
+ <------------>
+ *** Footer ***    
+       🔽 
+ <------------>                                      
+*/
